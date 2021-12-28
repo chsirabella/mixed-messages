@@ -1,3 +1,4 @@
+// Declare list of 20 top-paid baseball players (from spotrac.com).
 const players = [
     'Max Scherzer',
     'Mike Trout',
@@ -20,6 +21,7 @@ const players = [
     'Christian Yelich',
     'Paul Goldschmidt',
 ];
+// Declare list of all 30 MLB teams in alphabetical order.
 const teams = [
     'Angels',
     'Astros',
@@ -53,15 +55,19 @@ const teams = [
     'Yankees',
 ];
 
+// Create function that accepts an array as a parameter and returns a random
+// value from that array.
 const randomElem = (array) => {
     const i = Math.floor(Math.random() * array.length);
     return array[i];
 }
 
+// Choose random player.
 const player = randomElem(players);
+// Choose random team.
 const team1 = randomElem(teams);
-
+// Choose random team that was not already chosen.
 const teams2 = teams.filter(team => team !== team1);
 const team2 = randomElem(teams2);
 
-console.log(`Breaking news: ${player} has been traded from the ${team1} to the ${team2}.`);
+console.log(`BREAKING NEWS: ${player} has been traded from the ${team1} to the ${team2}.`);
